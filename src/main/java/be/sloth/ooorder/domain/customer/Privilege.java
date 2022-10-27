@@ -1,5 +1,5 @@
-package be.sloth.ooorder.domain;
+package be.sloth.ooorder.domain.customer;
 
 public enum Privilege {
-    ADMIN
+    ADMIN, CUSTOMER
 }
