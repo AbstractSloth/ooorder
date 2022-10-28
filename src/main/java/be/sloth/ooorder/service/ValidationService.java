@@ -35,11 +35,15 @@ public class ValidationService {
     public void validateNewProduct(RegisterProductDTO toBeAdded){
         assertNotNullOrBlank(toBeAdded.getName(), "name");
         validatePrice(toBeAdded.getPriceInEuro());
-
+        validateAmount(toBeAdded.getStock());
     }
 
     public void validatePrice(BigDecimal price){
         if(price.compareTo(BigDecimal.ZERO) < 0) throw new IllegalArgumentException("price can not be negative!");
+    }
+
+    public void validateAmount(Integer amount){
+        if(amount < 0) throw new IllegalArgumentException("amount can not be negative!");
     }
 
 

@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class Product {
 
-    private String id;
+    private final String id;
     private String name;
     private String description;
     private BigDecimal priceInEuro;
@@ -19,5 +19,17 @@ public class Product {
 
     public String getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public BigDecimal getPriceInEuro() {
+        return priceInEuro;
     }
 }

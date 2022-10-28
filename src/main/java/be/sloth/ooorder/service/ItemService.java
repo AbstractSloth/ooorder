@@ -1,11 +1,14 @@
 package be.sloth.ooorder.service;
 
+import be.sloth.ooorder.api.dto.ProductDTO;
 import be.sloth.ooorder.api.dto.RegisterProductDTO;
 import be.sloth.ooorder.api.mapper.ProductMapper;
 import be.sloth.ooorder.domain.product.Item;
 import be.sloth.ooorder.domain.product.Product;
 import be.sloth.ooorder.domain.repository.ItemRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 import static be.sloth.ooorder.domain.customer.Privilege.*;
 
@@ -38,6 +41,7 @@ public class ItemService {
     }
 
     public void ReplenishStock(Integer amount, String productId){
+        if(!itemRepo.doesProductExist(productId))throw new IllegalArgumentException("no such product!");
         for (int i = 0; i < amount; i++) {
             StockItem(productId);
         }
@@ -45,6 +49,12 @@ public class ItemService {
 
     public void StockItem(String productId){
         itemRepo.addStock(new Item(productId));
+    }
+
+    public List<ProductDTO> showCatalogue(){
+        return itemRepo.getCatalogue().stream()
+                .map(mappo::mapProduct)
+                .toList();
     }
 
 

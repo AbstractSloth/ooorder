@@ -46,8 +46,24 @@ class ProductControlTest {
                 .then()
                 .assertThat()
                 .statusCode(HttpStatus.CREATED.value())
-                .extract()
-                .response();
+                .extract();
+    }
+
+    @Test
+    void viewCatalogue() {
+
+
+
+        given()
+                .baseUri("http://localhost")
+                .port(port)
+                .header("Content-type", "application/json")
+                .when()
+                .get("/catalogue")
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.OK.value())
+                .extract();
     }
 
 }
