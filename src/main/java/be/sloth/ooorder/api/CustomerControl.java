@@ -12,6 +12,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(path="customer")
+@CrossOrigin
 public class CustomerControl {
 
     private final CustomerService serviceChan;

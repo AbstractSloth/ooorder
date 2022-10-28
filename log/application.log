@@ -1,0 +1,314 @@
+2022-10-28 11:54:52.947  INFO 832 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 832 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 11:54:52.949  INFO 832 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 11:54:54.057  INFO 832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 11:54:54.077  INFO 832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 11:54:54.079  INFO 832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 11:54:54.171  INFO 832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 11:54:54.171  INFO 832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1043 ms
+2022-10-28 11:54:56.094  INFO 832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62496 (http) with context path ''
+2022-10-28 11:54:56.110  INFO 832 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.461 seconds (JVM running for 4.379)
+2022-10-28 11:54:57.666  INFO 832 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 11:54:57.666  INFO 832 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 11:54:57.667  INFO 832 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 11:54:57.903  INFO 832 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 11:54:57.905  INFO 832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 11:58:21.691  INFO 28096 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 28096 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 11:58:21.694  INFO 28096 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 11:58:23.110  INFO 28096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 11:58:23.118  INFO 28096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 11:58:23.118  INFO 28096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 11:58:23.208  INFO 28096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 11:58:23.208  INFO 28096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1308 ms
+2022-10-28 11:58:24.652  INFO 28096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62518 (http) with context path ''
+2022-10-28 11:58:24.665  INFO 28096 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.291 seconds (JVM running for 4.422)
+2022-10-28 11:58:25.897  INFO 28096 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 11:58:25.898  INFO 28096 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 11:58:25.898  INFO 28096 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-28 11:58:26.158  INFO 28096 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 11:58:26.160  INFO 28096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 12:02:29.457  INFO 1520 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 1520 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 12:02:29.458  INFO 1520 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 12:02:30.526  INFO 1520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 12:02:30.535  INFO 1520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 12:02:30.536  INFO 1520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 12:02:30.620  INFO 1520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 12:02:30.621  INFO 1520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 991 ms
+2022-10-28 12:02:32.452  INFO 1520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62541 (http) with context path ''
+2022-10-28 12:02:32.470  INFO 1520 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.29 seconds (JVM running for 4.127)
+2022-10-28 12:02:34.023  INFO 1520 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 12:02:34.024  INFO 1520 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 12:02:34.025  INFO 1520 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 12:02:34.211  INFO 1520 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 12:02:34.214  INFO 1520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 12:03:16.526  INFO 24464 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 24464 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 12:03:16.528  INFO 24464 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 12:03:17.572  INFO 24464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 12:03:17.582  INFO 24464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 12:03:17.583  INFO 24464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 12:03:17.671  INFO 24464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 12:03:17.671  INFO 24464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms
+2022-10-28 12:03:19.094  INFO 24464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62549 (http) with context path ''
+2022-10-28 12:03:19.104  INFO 24464 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 2.868 seconds (JVM running for 3.724)
+2022-10-28 12:03:20.481  INFO 24464 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 12:03:20.483  INFO 24464 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 12:03:20.483  INFO 24464 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-28 12:03:20.725  INFO 24464 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 12:03:20.727  INFO 24464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 12:04:10.993  INFO 27856 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 27856 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 12:04:10.994  INFO 27856 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 12:04:12.231  INFO 27856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 12:04:12.240  INFO 27856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 12:04:12.241  INFO 27856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 12:04:12.354  INFO 27856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 12:04:12.354  INFO 27856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1196 ms
+2022-10-28 12:04:13.781  INFO 27856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62561 (http) with context path ''
+2022-10-28 12:04:13.790  INFO 27856 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.155 seconds (JVM running for 4.151)
+2022-10-28 12:04:15.154  INFO 27856 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 12:04:15.155  INFO 27856 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 12:04:15.157  INFO 27856 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-10-28 12:04:15.401  INFO 27856 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 12:04:15.403  INFO 27856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 12:09:39.034  INFO 14916 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 14916 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 12:09:39.035  INFO 14916 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 12:09:40.290  INFO 14916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 12:09:40.299  INFO 14916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 12:09:40.300  INFO 14916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 12:09:40.405  INFO 14916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 12:09:40.405  INFO 14916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1187 ms
+2022-10-28 12:09:41.841  INFO 14916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62671 (http) with context path ''
+2022-10-28 12:09:41.850  INFO 14916 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.134 seconds (JVM running for 4.014)
+2022-10-28 12:09:42.952  INFO 14916 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 12:09:42.952  INFO 14916 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 12:09:42.954  INFO 14916 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-10-28 12:09:43.146  INFO 14916 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 12:09:43.147  INFO 14916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 12:10:36.187  INFO 25536 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 25536 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 12:10:36.189  INFO 25536 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 12:10:37.199  INFO 25536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 12:10:37.209  INFO 25536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 12:10:37.210  INFO 25536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 12:10:37.307  INFO 25536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 12:10:37.307  INFO 25536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 966 ms
+2022-10-28 12:10:38.761  INFO 25536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62677 (http) with context path ''
+2022-10-28 12:10:38.774  INFO 25536 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 2.895 seconds (JVM running for 3.795)
+2022-10-28 12:10:40.382  INFO 25536 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 12:10:40.383  INFO 25536 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 12:10:40.384  INFO 25536 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 12:10:40.693  INFO 25536 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 12:10:40.695  INFO 25536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 13:32:18.707  INFO 19688 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 19688 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:32:18.709  INFO 19688 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:32:20.464  INFO 19688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 13:32:20.476  INFO 19688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:32:20.477  INFO 19688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:32:20.595  INFO 19688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:32:20.596  INFO 19688 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1573 ms
+2022-10-28 13:32:22.610  INFO 19688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63222 (http) with context path ''
+2022-10-28 13:32:22.623  INFO 19688 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 4.352 seconds (JVM running for 5.545)
+2022-10-28 13:32:24.194  INFO 19688 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:32:24.194  INFO 19688 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:32:24.195  INFO 19688 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-28 13:32:24.421  INFO 19688 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 13:32:24.422  INFO 19688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 13:34:41.968  INFO 16820 --- [main] be.sloth.ooorder.OoorderApplication      : Starting OoorderApplication using Java 17 on LAP0513 with PID 16820 (C:\_development\stuff\ooorder\target\classes started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:34:41.970  INFO 16820 --- [main] be.sloth.ooorder.OoorderApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:34:42.714  INFO 16820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-28 13:34:42.721  INFO 16820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:34:42.723  INFO 16820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:34:42.815  INFO 16820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:34:42.816  INFO 16820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 683 ms
+2022-10-28 13:34:43.476  INFO 16820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-28 13:34:43.483  INFO 16820 --- [main] be.sloth.ooorder.OoorderApplication      : Started OoorderApplication in 1.792 seconds (JVM running for 2.256)
+2022-10-28 13:38:27.451  INFO 16820 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:38:27.451  INFO 16820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:38:27.451  INFO 16820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-28 13:43:52.480  INFO 1864 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 1864 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:43:52.482  INFO 1864 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:43:54.150  INFO 1864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 13:43:54.160  INFO 1864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:43:54.160  INFO 1864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:43:54.289  INFO 1864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:43:54.289  INFO 1864 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1518 ms
+2022-10-28 13:43:56.283  INFO 1864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54495 (http) with context path ''
+2022-10-28 13:43:56.295  INFO 1864 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 4.284 seconds (JVM running for 6.804)
+2022-10-28 13:43:57.849  INFO 1864 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:43:57.850  INFO 1864 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:43:57.851  INFO 1864 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:43:58.107  INFO 1864 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 13:43:58.109  INFO 1864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 13:44:20.726  INFO 23092 --- [main] be.sloth.ooorder.OoorderApplication      : Starting OoorderApplication using Java 17 on LAP0513 with PID 23092 (C:\_development\stuff\ooorder\target\classes started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:44:20.729  INFO 23092 --- [main] be.sloth.ooorder.OoorderApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:44:21.972  INFO 23092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-28 13:44:21.983  INFO 23092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:44:21.984  INFO 23092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:44:22.089  INFO 23092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:44:22.089  INFO 23092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1041 ms
+2022-10-28 13:44:22.981  INFO 23092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-28 13:44:22.995  INFO 23092 --- [main] be.sloth.ooorder.OoorderApplication      : Started OoorderApplication in 2.715 seconds (JVM running for 3.258)
+2022-10-28 13:44:28.185  INFO 23092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:44:28.186  INFO 23092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:44:28.187  INFO 23092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:45:44.225  INFO 12708 --- [main] be.sloth.ooorder.OoorderApplication      : Starting OoorderApplication using Java 17 on LAP0513 with PID 12708 (C:\_development\stuff\ooorder\target\classes started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:45:44.229  INFO 12708 --- [main] be.sloth.ooorder.OoorderApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:45:45.240  INFO 12708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-28 13:45:45.246  INFO 12708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:45:45.247  INFO 12708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:45:45.339  INFO 12708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:45:45.339  INFO 12708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 842 ms
+2022-10-28 13:45:46.211  INFO 12708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-28 13:45:46.222  INFO 12708 --- [main] be.sloth.ooorder.OoorderApplication      : Started OoorderApplication in 2.392 seconds (JVM running for 3.153)
+2022-10-28 13:46:04.937  INFO 12708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:46:04.937  INFO 12708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:46:04.937  INFO 12708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-28 13:51:06.614  INFO 26068 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 26068 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:51:06.615  INFO 26068 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:51:07.728  INFO 26068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 13:51:07.751  INFO 26068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:51:07.752  INFO 26068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:51:07.841  INFO 26068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:51:07.841  INFO 26068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1036 ms
+2022-10-28 13:51:09.626  INFO 26068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54608 (http) with context path ''
+2022-10-28 13:51:09.638  INFO 26068 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.325 seconds (JVM running for 4.255)
+2022-10-28 13:51:11.326  INFO 26068 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:51:11.326  INFO 26068 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:51:11.327  INFO 26068 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:51:11.561  INFO 26068 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 13:51:11.562  INFO 26068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 13:52:38.726  INFO 19868 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 19868 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:52:38.727  INFO 19868 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:52:39.939  INFO 19868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 13:52:39.947  INFO 19868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:52:39.947  INFO 19868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:52:40.043  INFO 19868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:52:40.043  INFO 19868 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1156 ms
+2022-10-28 13:52:41.842  INFO 19868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54636 (http) with context path ''
+2022-10-28 13:52:41.855  INFO 19868 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.461 seconds (JVM running for 4.374)
+2022-10-28 13:52:43.575  INFO 19868 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:52:43.576  INFO 19868 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:52:43.577  INFO 19868 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:52:43.838  INFO 19868 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 13:52:43.841  INFO 19868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 13:54:23.014  INFO 20396 --- [main] be.sloth.ooorder.OoorderApplication      : Starting OoorderApplication using Java 17 on LAP0513 with PID 20396 (C:\_development\stuff\ooorder\target\classes started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:54:23.016  INFO 20396 --- [main] be.sloth.ooorder.OoorderApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:54:23.801  INFO 20396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-28 13:54:23.806  INFO 20396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:54:23.808  INFO 20396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:54:23.880  INFO 20396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:54:23.880  INFO 20396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
+2022-10-28 13:54:24.560  INFO 20396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-28 13:54:24.568  INFO 20396 --- [main] be.sloth.ooorder.OoorderApplication      : Started OoorderApplication in 1.829 seconds (JVM running for 2.289)
+2022-10-28 13:54:38.369  INFO 20396 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:54:38.370  INFO 20396 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:54:38.371  INFO 20396 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:57:16.375  INFO 2932 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 2932 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:57:16.376  INFO 2932 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:57:17.800  INFO 2932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 13:57:17.811  INFO 2932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:57:17.811  INFO 2932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:57:17.943  INFO 2932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:57:17.943  INFO 2932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1354 ms
+2022-10-28 13:57:19.998  INFO 2932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54685 (http) with context path ''
+2022-10-28 13:57:20.013  INFO 2932 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.957 seconds (JVM running for 5.032)
+2022-10-28 13:57:21.599  INFO 2932 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:57:21.599  INFO 2932 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:57:21.600  INFO 2932 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:57:21.844  INFO 2932 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 13:57:21.846  INFO 2932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 13:59:26.665  INFO 26720 --- [main] b.sloth.ooorder.api.CustomerControlTest  : Starting CustomerControlTest using Java 17 on LAP0513 with PID 26720 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 13:59:26.666  INFO 26720 --- [main] b.sloth.ooorder.api.CustomerControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 13:59:27.740  INFO 26720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 13:59:27.748  INFO 26720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 13:59:27.748  INFO 26720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 13:59:27.842  INFO 26720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 13:59:27.844  INFO 26720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1014 ms
+2022-10-28 13:59:29.366  INFO 26720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54705 (http) with context path ''
+2022-10-28 13:59:29.375  INFO 26720 --- [main] b.sloth.ooorder.api.CustomerControlTest  : Started CustomerControlTest in 3.021 seconds (JVM running for 4.006)
+2022-10-28 13:59:30.549  INFO 26720 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 13:59:30.549  INFO 26720 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 13:59:30.550  INFO 26720 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 13:59:30.724  INFO 26720 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 13:59:30.726  INFO 26720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 14:06:33.248  INFO 9452 --- [main] b.sloth.ooorder.api.CustomerControlTest  : Starting CustomerControlTest using Java 17 on LAP0513 with PID 9452 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 14:06:33.250  INFO 9452 --- [main] b.sloth.ooorder.api.CustomerControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 14:06:34.461  INFO 9452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 14:06:34.470  INFO 9452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 14:06:34.470  INFO 9452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 14:06:34.589  INFO 9452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 14:06:34.589  INFO 9452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1141 ms
+2022-10-28 14:06:36.265  INFO 9452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54745 (http) with context path ''
+2022-10-28 14:06:36.281  INFO 9452 --- [main] b.sloth.ooorder.api.CustomerControlTest  : Started CustomerControlTest in 3.356 seconds (JVM running for 4.31)
+2022-10-28 14:06:37.948  INFO 9452 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 14:06:37.948  INFO 9452 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 14:06:37.950  INFO 9452 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-10-28 14:06:38.208  INFO 9452 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 14:06:38.210  INFO 9452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 14:06:54.620  INFO 23040 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 23040 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 14:06:54.622  INFO 23040 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 14:06:56.483  INFO 23040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 14:06:56.497  INFO 23040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 14:06:56.499  INFO 23040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 14:06:56.638  INFO 23040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 14:06:56.638  INFO 23040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1698 ms
+2022-10-28 14:06:58.615  INFO 23040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54751 (http) with context path ''
+2022-10-28 14:06:58.630  INFO 23040 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 4.463 seconds (JVM running for 5.617)
+2022-10-28 14:07:00.222  INFO 23040 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 14:07:00.223  INFO 23040 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 14:07:00.224  INFO 23040 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 14:07:00.478  INFO 23040 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 14:07:00.479  INFO 23040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 14:08:59.760  INFO 21784 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 21784 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 14:08:59.761  INFO 21784 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 14:09:00.843  INFO 21784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 14:09:00.852  INFO 21784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 14:09:00.853  INFO 21784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 14:09:00.951  INFO 21784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 14:09:00.953  INFO 21784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1031 ms
+2022-10-28 14:09:02.729  INFO 21784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54773 (http) with context path ''
+2022-10-28 14:09:02.743  INFO 21784 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.312 seconds (JVM running for 4.213)
+2022-10-28 14:09:04.346  INFO 21784 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 14:09:04.347  INFO 21784 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 14:09:04.349  INFO 21784 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 14:09:04.599  INFO 21784 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 14:09:04.601  INFO 21784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 14:11:14.632  INFO 26156 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 26156 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 14:11:14.634  INFO 26156 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 14:11:15.725  INFO 26156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 14:11:15.734  INFO 26156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 14:11:15.734  INFO 26156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 14:11:15.823  INFO 26156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 14:11:15.824  INFO 26156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1046 ms
+2022-10-28 14:11:17.538  INFO 26156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54786 (http) with context path ''
+2022-10-28 14:11:17.547  INFO 26156 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.214 seconds (JVM running for 4.126)
+2022-10-28 14:11:18.740  INFO 26156 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 14:11:18.740  INFO 26156 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 14:11:18.741  INFO 26156 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 14:11:18.902  INFO 26156 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 14:11:18.904  INFO 26156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 14:16:05.587  INFO 26088 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 26088 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 14:16:05.589  INFO 26088 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 14:16:06.858  INFO 26088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 14:16:06.866  INFO 26088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 14:16:06.866  INFO 26088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 14:16:06.954  INFO 26088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 14:16:06.955  INFO 26088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1194 ms
+2022-10-28 14:16:08.512  INFO 26088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54919 (http) with context path ''
+2022-10-28 14:16:08.525  INFO 26088 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.249 seconds (JVM running for 5.782)
+2022-10-28 14:16:09.840  INFO 26088 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 14:16:09.840  INFO 26088 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 14:16:09.841  INFO 26088 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 14:16:10.004  INFO 26088 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 14:16:10.007  INFO 26088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-28 14:16:46.291  INFO 18068 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 18068 (started by fobe in C:\_development\stuff\ooorder)
+2022-10-28 14:16:46.293  INFO 18068 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-10-28 14:16:47.744  INFO 18068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-10-28 14:16:47.768  INFO 18068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-28 14:16:47.768  INFO 18068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-28 14:16:47.887  INFO 18068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-28 14:16:47.887  INFO 18068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1310 ms
+2022-10-28 14:16:49.748  INFO 18068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54931 (http) with context path ''
+2022-10-28 14:16:49.762  INFO 18068 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 3.88 seconds (JVM running for 5.005)
+2022-10-28 14:16:51.317  INFO 18068 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-28 14:16:51.318  INFO 18068 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-28 14:16:51.319  INFO 18068 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-28 14:16:51.591  INFO 18068 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-28 14:16:51.592  INFO 18068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'

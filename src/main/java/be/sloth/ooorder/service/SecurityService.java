@@ -8,10 +8,12 @@ import be.sloth.ooorder.service.exception.BadCredentialsException;
 import be.sloth.ooorder.service.exception.NoPrivilegeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.Base64;
 import java.util.NoSuchElementException;
 
+@Service
 public class SecurityService {
 
     private final Logger logger = LoggerFactory.getLogger(SecurityService.class);

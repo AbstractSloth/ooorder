@@ -14,8 +14,6 @@ import static io.restassured.RestAssured.given;
 class CustomerControlTest {
 
 
-    @Autowired
-    private CustomerControl customerControl;
 
 
     private static String requestBody = "{\n" +

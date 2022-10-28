@@ -1,9 +1,14 @@
 package be.sloth.ooorder.service;
 
 import be.sloth.ooorder.api.dto.RegisterCustomerDTO;
+import be.sloth.ooorder.api.dto.RegisterProductDTO;
 import be.sloth.ooorder.domain.customer.Customer;
 import be.sloth.ooorder.domain.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+
+import static java.math.RoundingMode.HALF_EVEN;
 
 @Service
 public class ValidationService {
@@ -22,9 +27,19 @@ public class ValidationService {
         customerRepo.getAll().forEach(existing -> validateThatCustomer(toBeAdded, existing));
     }
 
-    void validateThatCustomer(RegisterCustomerDTO added, Customer existing) {
+    private void validateThatCustomer(RegisterCustomerDTO added, Customer existing) {
         if (added.geteMail().equals(existing.geteMail()))
             throw new IllegalArgumentException("E mail is not unique!");
+    }
+
+    public void validateNewProduct(RegisterProductDTO toBeAdded){
+        assertNotNullOrBlank(toBeAdded.getName(), "name");
+        validatePrice(toBeAdded.getPriceInEuro());
+
+    }
+
+    public void validatePrice(BigDecimal price){
+        if(price.compareTo(BigDecimal.ZERO) < 0) throw new IllegalArgumentException("price can not be negative!");
     }
 
 
