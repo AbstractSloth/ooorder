@@ -1,22 +1,27 @@
 package be.sloth.ooorder.service;
 
+import be.sloth.ooorder.api.dto.OrderDTO;
 import be.sloth.ooorder.api.dto.RegisterCustomerDTO;
 import be.sloth.ooorder.api.dto.RegisterProductDTO;
 import be.sloth.ooorder.domain.customer.Customer;
 import be.sloth.ooorder.domain.repository.CustomerRepository;
+import be.sloth.ooorder.domain.repository.ItemRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-
-import static java.math.RoundingMode.HALF_EVEN;
+import java.util.List;
 
 @Service
 public class ValidationService {
 
     private final CustomerRepository customerRepo;
 
-    public ValidationService(CustomerRepository customerRepo) {
+    private final ItemRepository itemRepo;
+
+
+    public ValidationService(CustomerRepository customerRepo, ItemRepository itemRepository) {
         this.customerRepo = customerRepo;
+        this.itemRepo = itemRepository;
     }
 
     public void validateNewCustomer(RegisterCustomerDTO toBeAdded) {
@@ -55,5 +60,15 @@ public class ValidationService {
     public void validateEmail(String eMail) {
         if (eMail == null || !eMail.matches("^[A-z0-9]+@[A-z0-9]+\\.[A-z0-9]+$"))
             throw new IllegalArgumentException("E mail does not conform to format!");
+    }
+
+    public void validatePlacedOrders(List<OrderDTO> orders){
+        orders.forEach(this::validateThatOrder);
+    }
+
+    private void validateThatOrder(OrderDTO order){
+        assertNotNullOrBlank(order.getProduct(),"product");
+        if(!itemRepo.doesProductExist(order.getProduct())) throw new IllegalArgumentException("no such product");
+        validateAmount(order.getAmount());
     }
 }

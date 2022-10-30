@@ -36,6 +36,10 @@ public class ItemRepository {
         stock.put(item.getId(),item);
     }
 
+    public Product getProductById(String id){
+        return catalogue.get(id);
+    }
+
     public boolean doesProductExist(String id){
         return catalogue.containsKey(id);
     }
@@ -45,6 +49,21 @@ public class ItemRepository {
                 .filter(item -> item.getStatus().equals(AVAILABLE))
                 .filter(item -> item.getProduct().equals(productId))
                 .toList().size();
+    }
+
+    public Item getFirstInStock(String productId){
+        return stock.values().stream()
+                .filter(item -> item.getStatus().equals(AVAILABLE))
+                .filter(item -> item.getProduct().equals(productId))
+                .findFirst().orElseThrow();
+    }
+
+    public Product getItemProduct(Item item){
+        return catalogue.get(item.getProduct());
+    }
+
+    public Product getItemProduct(String itemId){
+        return getItemProduct(stock.get(itemId));
     }
 
 

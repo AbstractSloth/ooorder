@@ -25,9 +25,21 @@ public class SecurityService {
     }
 
     public void validateAuthorization(String authorization, Privilege privilege) {
-        Credentials credentials = decodeCredentials(authorization);
-        Customer customer;
 
+        Customer customer = validateCustomer(authorization);
+
+
+        if (!customer.checkYourPrivilege(privilege)) {
+            logger.error("User " + customer.geteMail() + " does not have privilege " + privilege);
+            throw new NoPrivilegeException(privilege);
+        }
+
+    }
+
+    public Customer validateCustomer(String auths){
+        Credentials credentials = decodeCredentials(auths);
+
+        Customer customer;
         try {
             customer = customerRepository.findByEmail(credentials.geteMail());
         } catch (NoSuchElementException e) {
@@ -40,10 +52,8 @@ public class SecurityService {
             logger.error("Password does not match for user " + credentials.geteMail());
             throw new BadCredentialsException();
         }
-        if (!customer.checkYourPrivilege(privilege)) {
-            logger.error("User " + customer.geteMail() + " does not have privilege " + privilege);
-            throw new NoPrivilegeException(privilege);
-        }
+
+        return customer;
 
     }
 

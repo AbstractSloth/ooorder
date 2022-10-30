@@ -27,4 +27,8 @@ public class Item {
     public ItemStatus getStatus() {
         return status;
     }
+
+    public void setStatus(ItemStatus status) {
+        this.status = status;
+    }
 }
