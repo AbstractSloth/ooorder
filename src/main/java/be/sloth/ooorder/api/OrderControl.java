@@ -21,9 +21,9 @@ public class OrderControl {
         this.service = service;
     }
 
-    @PostMapping(consumes = APPLICATION_JSON_VALUE,produces = APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     @ResponseStatus(CREATED)
-    public OrderReceiptDTO placeOrder(@RequestHeader String authorization, @RequestBody List<OrderDTO> order){
-        return service.placeOrder(order,authorization);
+    public OrderReceiptDTO placeOrder(@RequestHeader String authorization, @RequestBody List<OrderDTO> order) {
+        return service.placeOrder(order, authorization);
     }
 }

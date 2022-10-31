@@ -16,7 +16,7 @@ public class OrderReceiptDTO {
         this.items = new ArrayList<>();
     }
 
-    public void addReceiptItem(ReceiptItem item){
+    public void addReceiptItem(ReceiptItem item) {
         items.add(item);
     }
 

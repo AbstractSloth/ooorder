@@ -28,37 +28,37 @@ public class OrderMapper {
         this.itemRepo = itemRepo;
     }
 
-    public Order placeOrder(List<OrderDTO> orders, String customerId){
+    public Order placeOrder(List<OrderDTO> orders, String customerId) {
         Order order = new Order(customerId);
-        orders.forEach(dto->order.addOrderItem(createOrderItem(dto)));
+        orders.forEach(dto -> order.addOrderItem(createOrderItem(dto)));
         return order;
     }
 
-    private OrderItem createOrderItem(OrderDTO dto){
+    private OrderItem createOrderItem(OrderDTO dto) {
         int amountInStock = itemRepo.getAmountInStock(dto.getProduct());
         Product product = itemRepo.getProductById(dto.getProduct());
-        OrderItem orderItem = new OrderItem(product.getPriceInEuro(),setDeliveryDate(dto.getAmount(),amountInStock));
+        OrderItem orderItem = new OrderItem(product.getPriceInEuro(), setDeliveryDate(dto.getAmount(), amountInStock));
         for (int i = 0; i < dto.getAmount(); i++) {
 
-            if(i < amountInStock){
+            if (i < amountInStock) {
                 Item item = itemRepo.getFirstInStock(dto.getProduct());
                 orderItem.addItem(item.getId());
                 item.setStatus(SOLD);
-            } else{
-               orderItem.addItem(reserveItem(dto.getProduct()));
+            } else {
+                orderItem.addItem(reserveItem(dto.getProduct()));
             }
         }
 
         return orderItem;
     }
 
-    private LocalDate setDeliveryDate(int ordered, int inStock){
-        if(inStock > ordered) return LocalDate.now().plusDays(1);
+    private LocalDate setDeliveryDate(int ordered, int inStock) {
+        if (inStock > ordered) return LocalDate.now().plusDays(1);
 
         return LocalDate.now().plusDays(7);
     }
 
-    private String reserveItem(String productId){
+    private String reserveItem(String productId) {
         Item item = new Item(productId);
         itemRepo.addStock(item);
         item.setStatus(RESERVED);
@@ -74,7 +74,7 @@ public class OrderMapper {
         return receipt;
     }
 
-    private ReceiptItem makeReceiptItem(OrderItem orderItem){
+    private ReceiptItem makeReceiptItem(OrderItem orderItem) {
 
         return new ReceiptItem(findProductName(orderItem.getItems().get(0)),
                 orderItem.getDeliveryDate(),
@@ -83,15 +83,15 @@ public class OrderMapper {
                 makePriceString(calculateSubtotal(orderItem)));
     }
 
-    private String findProductName(String itemId){
+    private String findProductName(String itemId) {
         return itemRepo.getItemProduct(itemId).getName();
     }
 
-    private String makePriceString(BigDecimal price){
-       return price.toString() + " €";
+    private String makePriceString(BigDecimal price) {
+        return price.toString() + " €";
     }
 
-    private BigDecimal calculateSubtotal(OrderItem item){
+    private BigDecimal calculateSubtotal(OrderItem item) {
         BigDecimal multiplicand = new BigDecimal(item.getItems().size());
         BigDecimal subTotal = item.getPricePerUnit().multiply(multiplicand);
         totalPrice = totalPrice.add(subTotal);

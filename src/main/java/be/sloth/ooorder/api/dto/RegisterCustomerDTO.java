@@ -3,7 +3,6 @@ package be.sloth.ooorder.api.dto;
 public class RegisterCustomerDTO {
 
 
-
     private String firstName;
     private String lastName;
     private String phoneNumber;

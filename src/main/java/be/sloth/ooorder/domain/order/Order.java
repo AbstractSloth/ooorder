@@ -16,7 +16,7 @@ public class Order {
 
     }
 
-    public void addOrderItem(OrderItem item){
+    public void addOrderItem(OrderItem item) {
         orderItems.add(item);
     }
 

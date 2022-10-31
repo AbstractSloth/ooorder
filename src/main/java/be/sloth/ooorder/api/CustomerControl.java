@@ -11,7 +11,7 @@ import static org.springframework.http.HttpStatus.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(path="customer")
+@RequestMapping(path = "customer")
 @CrossOrigin
 public class CustomerControl {
 
@@ -24,7 +24,7 @@ public class CustomerControl {
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
     @ResponseStatus(CREATED)
-    public void registerCustomer(@RequestBody RegisterCustomerDTO toBeAdded){
+    public void registerCustomer(@RequestBody RegisterCustomerDTO toBeAdded) {
         serviceChan.createCustomer(toBeAdded);
     }
 

@@ -24,16 +24,15 @@ public class ProductControl {
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
     @ResponseStatus(CREATED)
-    public void registerProduct(@RequestHeader String authorization, @RequestBody RegisterProductDTO dto ){
-        itemService.RegisterProduct(dto,authorization);
+    public void registerProduct(@RequestHeader String authorization, @RequestBody RegisterProductDTO dto) {
+        itemService.registerProduct(dto, authorization);
     }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
     @ResponseStatus(OK)
-    public List<ProductDTO> showCatalogue(){
+    public List<ProductDTO> showCatalogue() {
         return itemService.showCatalogue();
     }
-
 
 
 }

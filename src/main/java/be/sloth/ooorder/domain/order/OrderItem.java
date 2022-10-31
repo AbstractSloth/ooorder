@@ -11,13 +11,13 @@ public class OrderItem {
     private final BigDecimal pricePerUnit;
     private LocalDate deliveryDate;
 
-    public OrderItem( BigDecimal pricePerUnit, LocalDate deliveryDate) {
+    public OrderItem(BigDecimal pricePerUnit, LocalDate deliveryDate) {
         this.items = new ArrayList<>();
         this.pricePerUnit = pricePerUnit;
         this.deliveryDate = deliveryDate;
     }
 
-    public void addItem(String itemId){
+    public void addItem(String itemId) {
         items.add(itemId);
     }
 

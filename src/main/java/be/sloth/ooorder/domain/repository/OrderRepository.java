@@ -15,7 +15,7 @@ public class OrderRepository {
         orders = new HashMap<>();
     }
 
-    public void addOrder(Order order){
-        orders.put(order.getId(),order);
+    public void addOrder(Order order) {
+        orders.put(order.getId(), order);
     }
 }

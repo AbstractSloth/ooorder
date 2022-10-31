@@ -16,34 +16,34 @@ public class CustomerRepository {
     private final Map<String, Customer> customers;
 
 
-    public CustomerRepository(){
+    public CustomerRepository() {
         customers = new HashMap<>();
         addInitialAdmin();
     }
 
-    private void addInitialAdmin(){
+    private void addInitialAdmin() {
         Customer customer = new Customer("Giga",
                 "Chad",
                 "gigachad@based.com",
-                new Address("Based Boulevard","69","420","SneedVille"),
+                new Address("Based Boulevard", "69", "420", "SneedVille"),
                 "1111111111111"
-                ,"password");
+                , "password");
 
         customer.grantPrivilege(ADMIN);
         addCustomer(customer);
     }
 
-   public void addCustomer(Customer customer){
+    public void addCustomer(Customer customer) {
         customers.put(customer.getId(), customer);
-   }
+    }
 
-   public Collection<Customer> getAll(){
-        return  customers.values();
-   }
+    public Collection<Customer> getAll() {
+        return customers.values();
+    }
 
-   public Customer findByEmail(String eMail){
+    public Customer findByEmail(String eMail) {
         return customers.values().stream()
                 .filter(customer -> customer.geteMail().equals(eMail))
                 .findFirst().orElseThrow();
-   }
+    }
 }

@@ -39,7 +39,7 @@ public class Customer {
     }
 
 
-    public void grantPrivilege(Privilege privilege){
+    public void grantPrivilege(Privilege privilege) {
         privileges.add(privilege);
     }
 
@@ -47,11 +47,11 @@ public class Customer {
         return eMail;
     }
 
-    public boolean checkPassword(String password){
+    public boolean checkPassword(String password) {
         return this.password.equals(password);
     }
 
-    public boolean checkYourPrivilege(Privilege privilege){
+    public boolean checkYourPrivilege(Privilege privilege) {
         return privileges.contains(privilege);
     }
 }

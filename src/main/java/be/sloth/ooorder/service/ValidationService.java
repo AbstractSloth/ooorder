@@ -37,18 +37,18 @@ public class ValidationService {
             throw new IllegalArgumentException("E mail is not unique!");
     }
 
-    public void validateNewProduct(RegisterProductDTO toBeAdded){
+    public void validateNewProduct(RegisterProductDTO toBeAdded) {
         assertNotNullOrBlank(toBeAdded.getName(), "name");
         validatePrice(toBeAdded.getPriceInEuro());
         validateAmount(toBeAdded.getStock());
     }
 
-    public void validatePrice(BigDecimal price){
-        if(price.compareTo(BigDecimal.ZERO) < 0) throw new IllegalArgumentException("price can not be negative!");
+    public void validatePrice(BigDecimal price) {
+        if (price.compareTo(BigDecimal.ZERO) < 0) throw new IllegalArgumentException("price can not be negative!");
     }
 
-    public void validateAmount(Integer amount){
-        if(amount < 0) throw new IllegalArgumentException("amount can not be negative!");
+    public void validateAmount(Integer amount) {
+        if (amount < 0) throw new IllegalArgumentException("amount can not be negative!");
     }
 
 
@@ -62,13 +62,13 @@ public class ValidationService {
             throw new IllegalArgumentException("E mail does not conform to format!");
     }
 
-    public void validatePlacedOrders(List<OrderDTO> orders){
+    public void validatePlacedOrders(List<OrderDTO> orders) {
         orders.forEach(this::validateThatOrder);
     }
 
-    private void validateThatOrder(OrderDTO order){
-        assertNotNullOrBlank(order.getProduct(),"product");
-        if(!itemRepo.doesProductExist(order.getProduct())) throw new IllegalArgumentException("no such product");
+    private void validateThatOrder(OrderDTO order) {
+        assertNotNullOrBlank(order.getProduct(), "product");
+        if (!itemRepo.doesProductExist(order.getProduct())) throw new IllegalArgumentException("no such product");
         validateAmount(order.getAmount());
     }
 }

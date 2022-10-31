@@ -21,7 +21,6 @@ public class OrderService {
     private final OrderMapper mapper;
 
 
-
     public OrderService(OrderRepository orderRepo, SecurityService security, ValidationService validation, OrderMapper mapper) {
         this.orderRepo = orderRepo;
         this.security = security;
@@ -29,7 +28,7 @@ public class OrderService {
         this.mapper = mapper;
     }
 
-    public OrderReceiptDTO placeOrder(List<OrderDTO> orders, String auths){
+    public OrderReceiptDTO placeOrder(List<OrderDTO> orders, String auths) {
         Customer customer = security.validateCustomer(auths);
         validation.validatePlacedOrders(orders);
         Order order = mapper.placeOrder(orders, customer.getId());

@@ -18,11 +18,11 @@ public class ProductMapper {
     }
 
 
-    public Product createProduct(RegisterProductDTO dto){
+    public Product createProduct(RegisterProductDTO dto) {
         return new Product(dto.getName(), dto.getDescription(), dto.getPriceInEuro());
     }
 
-    public ProductDTO mapProduct(Product product){
+    public ProductDTO mapProduct(Product product) {
         return new ProductDTO(product.getId(),
                 product.getName(),
                 product.getDescription(),
@@ -30,13 +30,13 @@ public class ProductMapper {
                 mapStockAmount(product.getId()));
     }
 
-    private String mapProductPrice(BigDecimal price){
+    private String mapProductPrice(BigDecimal price) {
         return price.toString() + " €";
     }
 
-    private String mapStockAmount(String id){
+    private String mapStockAmount(String id) {
         int amount = itemRepo.getAmountInStock(id);
-        if(amount> 0) return "There are " + amount + " in stock." ;
+        if (amount > 0) return "There are " + amount + " in stock.";
 
         return "This item is not in stock!";
     }

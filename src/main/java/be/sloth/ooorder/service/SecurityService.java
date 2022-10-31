@@ -36,7 +36,7 @@ public class SecurityService {
 
     }
 
-    public Customer validateCustomer(String auths){
+    public Customer validateCustomer(String auths) {
         Credentials credentials = decodeCredentials(auths);
 
         Customer customer;
@@ -48,7 +48,7 @@ public class SecurityService {
         }
 
 
-        if(!customer.checkPassword(credentials.getPassword())) {
+        if (!customer.checkPassword(credentials.getPassword())) {
             logger.error("Password does not match for user " + credentials.geteMail());
             throw new BadCredentialsException();
         }

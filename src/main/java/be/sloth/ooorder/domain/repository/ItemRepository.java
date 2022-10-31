@@ -24,45 +24,45 @@ public class ItemRepository {
     }
 
 
-    public void registerProduct(Product product){
-        catalogue.put(product.getId(),product);
+    public void registerProduct(Product product) {
+        catalogue.put(product.getId(), product);
     }
 
-    public Collection<Product> getCatalogue(){
+    public Collection<Product> getCatalogue() {
         return catalogue.values();
     }
 
-    public void addStock(Item item){
-        stock.put(item.getId(),item);
+    public void addStock(Item item) {
+        stock.put(item.getId(), item);
     }
 
-    public Product getProductById(String id){
+    public Product getProductById(String id) {
         return catalogue.get(id);
     }
 
-    public boolean doesProductExist(String id){
+    public boolean doesProductExist(String id) {
         return catalogue.containsKey(id);
     }
 
-    public int getAmountInStock(String productId){
+    public int getAmountInStock(String productId) {
         return stock.values().stream()
                 .filter(item -> item.getStatus().equals(AVAILABLE))
                 .filter(item -> item.getProduct().equals(productId))
                 .toList().size();
     }
 
-    public Item getFirstInStock(String productId){
+    public Item getFirstInStock(String productId) {
         return stock.values().stream()
                 .filter(item -> item.getStatus().equals(AVAILABLE))
                 .filter(item -> item.getProduct().equals(productId))
                 .findFirst().orElseThrow();
     }
 
-    public Product getItemProduct(Item item){
+    public Product getItemProduct(Item item) {
         return catalogue.get(item.getProduct());
     }
 
-    public Product getItemProduct(String itemId){
+    public Product getItemProduct(String itemId) {
         return getItemProduct(stock.get(itemId));
     }
 

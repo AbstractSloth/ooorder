@@ -19,7 +19,7 @@ public class CustomerService {
         this.mapper = mapper;
     }
 
-    public void createCustomer(RegisterCustomerDTO toBeAdded){
+    public void createCustomer(RegisterCustomerDTO toBeAdded) {
         validation.validateNewCustomer(toBeAdded);
         customerRepo.addCustomer(mapper.createNewCustomer(toBeAdded));
     }
