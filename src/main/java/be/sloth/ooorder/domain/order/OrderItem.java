@@ -7,30 +7,26 @@ import java.util.List;
 
 public class OrderItem {
 
-    private final List<String> items;
-    private final BigDecimal pricePerUnit;
-    private LocalDate deliveryDate;
+    private final String item;
+    private final BigDecimal price;
 
-    public OrderItem(BigDecimal pricePerUnit, LocalDate deliveryDate) {
-        this.items = new ArrayList<>();
-        this.pricePerUnit = pricePerUnit;
-        this.deliveryDate = deliveryDate;
+
+    private OrderLine line;
+
+    public OrderItem(BigDecimal price, String item) {
+        this.item = item;
+        this.price = price;
     }
 
-    public void addItem(String itemId) {
-        items.add(itemId);
+
+    public String getItem() {
+        return item;
     }
 
-    public List<String> getItems() {
-        return items;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public BigDecimal getPricePerUnit() {
-        return pricePerUnit;
-    }
 
-    public LocalDate getDeliveryDate() {
-        return deliveryDate;
-    }
 
 }

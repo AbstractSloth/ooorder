@@ -8,7 +8,7 @@ public class Order {
 
     private final String id;
     private final String customer;
-    private final List<OrderItem> orderItems = new ArrayList<OrderItem>();
+    private final List<OrderLine> orderLines = new ArrayList<>();
 
     public Order(String customer) {
         this.id = UUID.randomUUID().toString();
@@ -16,8 +16,8 @@ public class Order {
 
     }
 
-    public void addOrderItem(OrderItem item) {
-        orderItems.add(item);
+    public void addOrderLine(OrderLine line) {
+        orderLines.add(line);
     }
 
     public String getId() {
@@ -28,7 +28,7 @@ public class Order {
         return customer;
     }
 
-    public List<OrderItem> getOrderItems() {
-        return orderItems;
+    public List<OrderLine> getOrderLines() {
+        return orderLines;
     }
 }
