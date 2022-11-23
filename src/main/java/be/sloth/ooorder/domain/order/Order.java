@@ -1,30 +1,44 @@
 package be.sloth.ooorder.domain.order;
 
+import be.sloth.ooorder.domain.customer.Customer;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
+@Entity
+@Table(name = "oorder")
 public class Order {
 
-    private final String id;
-    private final String customer;
-    private final List<OrderLine> orderLines = new ArrayList<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "oorder_seq")
+    @SequenceGenerator(name = "oorder_seq", sequenceName = "oorder_seq", allocationSize = 1)
+    private long id;
 
-    public Order(String customer) {
-        this.id = UUID.randomUUID().toString();
+    @JoinColumn
+    @ManyToOne
+    private Customer customer;
+
+    @OneToMany(mappedBy = "order")
+    private List<OrderLine> orderLines;
+
+    public Order() {
+    }
+
+    public Order(Customer customer) {
         this.customer = customer;
-
+        this.orderLines = new ArrayList<>();
     }
 
     public void addOrderLine(OrderLine line) {
         orderLines.add(line);
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public String getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 

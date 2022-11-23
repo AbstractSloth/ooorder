@@ -4,8 +4,10 @@ import be.sloth.ooorder.api.dto.RegisterCustomerDTO;
 import be.sloth.ooorder.api.mapper.CustomerMapper;
 import be.sloth.ooorder.domain.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class CustomerService {
 
     private final CustomerRepository customerRepo;
@@ -21,7 +23,7 @@ public class CustomerService {
 
     public void createCustomer(RegisterCustomerDTO toBeAdded) {
         validation.validateNewCustomer(toBeAdded);
-        customerRepo.addCustomer(mapper.createNewCustomer(toBeAdded));
+        customerRepo.save(mapper.createNewCustomer(toBeAdded));
     }
 
 

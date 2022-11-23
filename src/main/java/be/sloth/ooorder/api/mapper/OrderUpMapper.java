@@ -6,7 +6,7 @@ import be.sloth.ooorder.api.dto.ReceiptItem;
 import be.sloth.ooorder.domain.order.Order;
 import be.sloth.ooorder.domain.order.OrderItem;
 import be.sloth.ooorder.domain.order.OrderLine;
-import be.sloth.ooorder.domain.repository.ItemRepository;
+import be.sloth.ooorder.domain.product.Item;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -14,12 +14,10 @@ import java.math.BigDecimal;
 @Component
 public class OrderUpMapper {
 
-    private final ItemRepository itemRepo;
+
     private BigDecimal totalPrice;
 
-    public OrderUpMapper(ItemRepository itemRepo) {
-        this.itemRepo = itemRepo;
-    }
+
 
     public OrderReceiptDTO makeReceipt(Order order) {
         OrderReceiptDTO receipt = new OrderReceiptDTO(order.getId());
@@ -38,8 +36,8 @@ public class OrderUpMapper {
                 makePriceString(calculateSubtotal(line,orderItem.getPrice())));
     }
 
-    private String findProductName(String itemId) {
-        return itemRepo.getItemProduct(itemId).getName();
+    private String findProductName(Item item) {
+        return item.getProduct().getName();
     }
 
     private String makePriceString(BigDecimal price) {

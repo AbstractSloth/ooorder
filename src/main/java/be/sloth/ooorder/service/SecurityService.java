@@ -9,11 +9,13 @@ import be.sloth.ooorder.service.exception.NoPrivilegeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Base64;
 import java.util.NoSuchElementException;
 
 @Service
+@Transactional
 public class SecurityService {
 
     private final Logger logger = LoggerFactory.getLogger(SecurityService.class);
@@ -30,7 +32,7 @@ public class SecurityService {
 
 
         if (!customer.checkYourPrivilege(privilege)) {
-            logger.error("User " + customer.geteMail() + " does not have privilege " + privilege);
+            logger.error("User " + customer.getMail() + " does not have privilege " + privilege);
             throw new NoPrivilegeException(privilege);
         }
 
@@ -39,14 +41,12 @@ public class SecurityService {
     public Customer validateCustomer(String auths) {
         Credentials credentials = decodeCredentials(auths);
 
-        Customer customer;
-        try {
-            customer = customerRepository.findByEmail(credentials.geteMail());
-        } catch (NoSuchElementException e) {
+        if(!customerRepository.existsByMail(credentials.geteMail())){
             logger.error("Unknown user with the username " + credentials.geteMail());
             throw new BadCredentialsException();
         }
 
+        Customer customer = customerRepository.findByMail(credentials.geteMail());
 
         if (!customer.checkPassword(credentials.getPassword())) {
             logger.error("Password does not match for user " + credentials.geteMail());

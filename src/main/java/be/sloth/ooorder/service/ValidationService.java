@@ -5,7 +5,7 @@ import be.sloth.ooorder.api.dto.RegisterCustomerDTO;
 import be.sloth.ooorder.api.dto.RegisterProductDTO;
 import be.sloth.ooorder.domain.customer.Customer;
 import be.sloth.ooorder.domain.repository.CustomerRepository;
-import be.sloth.ooorder.domain.repository.ItemRepository;
+import be.sloth.ooorder.domain.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -16,12 +16,12 @@ public class ValidationService {
 
     private final CustomerRepository customerRepo;
 
-    private final ItemRepository itemRepo;
+    private final ProductRepository itemRepo;
 
 
-    public ValidationService(CustomerRepository customerRepo, ItemRepository itemRepository) {
+    public ValidationService(CustomerRepository customerRepo, ProductRepository productRepository) {
         this.customerRepo = customerRepo;
-        this.itemRepo = itemRepository;
+        this.itemRepo = productRepository;
     }
 
     public void validateNewCustomer(RegisterCustomerDTO toBeAdded) {
@@ -29,11 +29,11 @@ public class ValidationService {
         assertNotNullOrBlank(toBeAdded.getLastName(), "Last name");
         assertNotNullOrBlank(toBeAdded.getCity(), "City");
         assertNotNullOrBlank(toBeAdded.getPassword(), "Password");
-        customerRepo.getAll().forEach(existing -> validateThatCustomer(toBeAdded, existing));
+        customerRepo.findAll().forEach(existing -> validateThatCustomer(toBeAdded, existing));
     }
 
     private void validateThatCustomer(RegisterCustomerDTO added, Customer existing) {
-        if (added.geteMail().equals(existing.geteMail()))
+        if (added.geteMail().equals(existing.getMail()))
             throw new IllegalArgumentException("E mail is not unique!");
     }
 
@@ -56,6 +56,10 @@ public class ValidationService {
         if (value == null || value.isBlank()) throw new IllegalArgumentException(field + " can not be empty!");
     }
 
+    public void assertIdNotZeroOrNegative(long id){
+        if(id <= 0) throw new IllegalArgumentException("not a valid id");
+    }
+
 
     public void validateEmail(String eMail) {
         if (eMail == null || !eMail.matches("^[A-z0-9]+@[A-z0-9]+\\.[A-z0-9]+$"))
@@ -67,8 +71,8 @@ public class ValidationService {
     }
 
     private void validateThatOrder(OrderDTO order) {
-        assertNotNullOrBlank(order.getProduct(), "product");
-        if (!itemRepo.doesProductExist(order.getProduct())) throw new IllegalArgumentException("no such product");
+        assertIdNotZeroOrNegative(order.getProduct());
+        if (!itemRepo.existsById(order.getProduct())) throw new IllegalArgumentException("no such product");
         validateAmount(order.getAmount());
     }
 }

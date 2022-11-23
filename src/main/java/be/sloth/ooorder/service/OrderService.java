@@ -8,10 +8,12 @@ import be.sloth.ooorder.domain.customer.Customer;
 import be.sloth.ooorder.domain.order.Order;
 import be.sloth.ooorder.domain.repository.OrderRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepo;
@@ -35,8 +37,8 @@ public class OrderService {
     public OrderReceiptDTO placeOrder(List<OrderDTO> orders, String auths) {
         Customer customer = security.validateCustomer(auths);
         validation.validatePlacedOrders(orders);
-        Order order = downMapper.placeOrder(orders, customer.getId());
-        orderRepo.addOrder(order);
+        Order order = downMapper.placeOrder(orders, customer);
+        orderRepo.save(order);
         return upMapper.makeReceipt(order);
     }
 }

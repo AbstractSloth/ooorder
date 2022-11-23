@@ -5,22 +5,25 @@ import java.util.List;
 
 public class OrderReceiptDTO {
 
-    private final String transactionId;
+    private long transactionId;
 
-    private final List<ReceiptItem> items;
+    private List<ReceiptItem> items;
 
     private String totalPrice;
 
-    public OrderReceiptDTO(String transactionId) {
+    public OrderReceiptDTO(long transactionId) {
         this.transactionId = transactionId;
         this.items = new ArrayList<>();
+    }
+
+    public OrderReceiptDTO() {
     }
 
     public void addReceiptItem(ReceiptItem item) {
         items.add(item);
     }
 
-    public String getTransactionId() {
+    public long getTransactionId() {
         return transactionId;
     }
 

@@ -1,26 +1,40 @@
 package be.sloth.ooorder.domain.product;
 
+import javax.persistence.*;
 import java.util.UUID;
 
 import static be.sloth.ooorder.domain.product.ItemStatus.*;
 
+@Entity
+@Table
 public class Item {
 
-    private final String id;
-    private final String product;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_seq")
+    @SequenceGenerator(name = "item_seq", sequenceName = "item_seq", allocationSize = 1)
+    private long id;
+
+    @JoinColumn
+    @ManyToOne
+    private Product product;
+
+    @Enumerated(EnumType.STRING)
     private ItemStatus status;
 
-    public Item(String product) {
-        this.id = UUID.randomUUID().toString();
+    public Item() {
+    }
+
+    public Item(Product product) {
+
         this.product = product;
         this.status = AVAILABLE;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public String getProduct() {
+    public Product getProduct() {
         return product;
     }
 

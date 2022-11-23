@@ -2,15 +2,15 @@ package be.sloth.ooorder.api.dto;
 
 public class OrderDTO {
 
-    private final String product;
+    private final long product;
     private final int amount;
 
-    public OrderDTO(String product, int amount) {
+    public OrderDTO(long product, int amount) {
         this.product = product;
         this.amount = amount;
     }
 
-    public String getProduct() {
+    public long getProduct() {
         return product;
     }
 

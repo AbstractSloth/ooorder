@@ -1,7 +1,9 @@
 package be.sloth.ooorder.api;
 
+import be.sloth.ooorder.domain.repository.CustomerRepository;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
@@ -13,6 +15,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 class ProductControlTest {
+
+
+    @Autowired
+    private CustomerRepository customerRepository;
 
     @LocalServerPort
     private int port;
@@ -30,6 +36,7 @@ class ProductControlTest {
 
         System.out.println(requestBody);
 
+        System.out.println(customerRepository.count());
 
         given()
                 .baseUri("http://localhost")

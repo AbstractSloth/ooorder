@@ -1,49 +1,15 @@
 package be.sloth.ooorder.domain.repository;
 
-import be.sloth.ooorder.domain.customer.Address;
 import be.sloth.ooorder.domain.customer.Customer;
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
-import static be.sloth.ooorder.domain.customer.Privilege.*;
-
-@Component
-public class CustomerRepository {
-
-    private final Map<String, Customer> customers;
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer,Long> {
 
 
-    public CustomerRepository() {
-        customers = new HashMap<>();
-        addInitialAdmin();
-    }
+    public Customer findByMail(String eMail);
 
-    private void addInitialAdmin() {
-        Customer customer = new Customer("Giga",
-                "Chad",
-                "gigachad@based.com",
-                new Address("Based Boulevard", "69", "420", "SneedVille"),
-                "1111111111111"
-                , "password");
+    public boolean existsByMail(String eMail);
 
-        customer.grantPrivilege(ADMIN);
-        addCustomer(customer);
-    }
-
-    public void addCustomer(Customer customer) {
-        customers.put(customer.getId(), customer);
-    }
-
-    public Collection<Customer> getAll() {
-        return customers.values();
-    }
-
-    public Customer findByEmail(String eMail) {
-        return customers.values().stream()
-                .filter(customer -> customer.geteMail().equals(eMail))
-                .findFirst().orElseThrow();
-    }
 }

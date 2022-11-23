@@ -1,8 +1,14 @@
 package be.sloth.ooorder.api;
 
+import be.sloth.ooorder.api.dto.OrderReceiptDTO;
+import be.sloth.ooorder.domain.product.ItemStatus;
 import be.sloth.ooorder.domain.product.Product;
 import be.sloth.ooorder.domain.repository.ItemRepository;
+import be.sloth.ooorder.domain.repository.ProductRepository;
+import be.sloth.ooorder.service.ItemService;
 import io.restassured.http.ContentType;
+import io.swagger.v3.core.util.Json;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,8 +16,8 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.annotation.DirtiesContext;
 
+import static be.sloth.ooorder.domain.product.ItemStatus.*;
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
@@ -22,32 +28,35 @@ class OrderControlTest {
     private int port;
 
     @Autowired
-    private  ItemRepository itemRepo;
+    private ProductRepository productRepo;
+
+    @Autowired
+    private ItemRepository itemRepo;
+
+    @Autowired
+    private ItemService service;
 
 
 
     @Test
     void placeOrder() {
 
-        Product product1 = itemRepo.getCatalogue().stream().toList().get(0);
+        service.registerDummyProduct();
 
-        Product product2 = itemRepo.getCatalogue().stream().toList().get(1);
 
         String requestBody = "[{\n" +
-                "  \"product\": \""+ product1.getId()  +"\",\n" +
+                "  \"product\": "+ 1  +",\n" +
                 "  \"amount\": 1 }, \n" +
                 "{\n" +
-                "  \"product\": \""+ product2.getId()  +"\",\n" +
+                "  \"product\": \""+ 2  +"\",\n" +
                 "  \"amount\": 10 } \n" +
                 "]";
 
 
 
 
-        System.out.println(requestBody);
 
-
-        given()
+        OrderReceiptDTO receipt = given()
                 .baseUri("http://localhost")
                 .port(port)
                 .auth()
@@ -62,7 +71,12 @@ class OrderControlTest {
                 .then()
                 .assertThat()
                 .statusCode(HttpStatus.CREATED.value())
-                .extract();
+                .extract().body().as(OrderReceiptDTO.class);
+
+        Json.prettyPrint(receipt);
+
+        Product product = productRepo.getReferenceById(2L);
+        Assertions.assertEquals(5,itemRepo.countItemsByProductAndStatus(product, RESERVED));
     }
 
 }

@@ -8,12 +8,15 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+import static be.sloth.ooorder.domain.product.ItemStatus.*;
+
 @Component
 public class ProductMapper {
 
+
     private final ItemRepository itemRepo;
 
-    public ProductMapper(ItemRepository itemRepo) {
+    public ProductMapper( ItemRepository itemRepo) {
         this.itemRepo = itemRepo;
     }
 
@@ -27,15 +30,15 @@ public class ProductMapper {
                 product.getName(),
                 product.getDescription(),
                 mapProductPrice(product.getPriceInEuro()),
-                mapStockAmount(product.getId()));
+                mapStockAmount(product));
     }
 
     private String mapProductPrice(BigDecimal price) {
         return price.toString() + " €";
     }
 
-    private String mapStockAmount(String id) {
-        int amount = itemRepo.getAmountInStock(id);
+    private String mapStockAmount(Product product) {
+        int amount = itemRepo.countItemsByProductAndStatus(product, AVAILABLE);
         if (amount > 0) return "There are " + amount + " in stock.";
 
         return "This item is not in stock!";

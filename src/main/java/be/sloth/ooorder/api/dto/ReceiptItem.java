@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class ReceiptItem {
 
-    private final String product;
+    private String product;
 
-    private final LocalDate delivery;
+    private LocalDate delivery;
 
-    private final String price;
-    private final int amount;
-    private final String subTotal;
+    private String price;
+    private int amount;
+    private String subTotal;
 
     public ReceiptItem(String product, LocalDate delivery, String price, int amount, String subTotal) {
         this.product = product;
@@ -18,6 +18,9 @@ public class ReceiptItem {
         this.price = price;
         this.amount = amount;
         this.subTotal = subTotal;
+    }
+
+    public ReceiptItem() {
     }
 
     public String getProduct() {

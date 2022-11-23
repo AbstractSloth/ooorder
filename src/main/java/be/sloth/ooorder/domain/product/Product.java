@@ -1,23 +1,35 @@
 package be.sloth.ooorder.domain.product;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
+@Entity
+@Table
 public class Product {
 
-    private final String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_seq")
+    @SequenceGenerator(name = "product_seq", sequenceName = "product_seq", allocationSize = 1)
+    private long id;
     private String name;
     private String description;
     private BigDecimal priceInEuro;
 
+    @OneToMany(mappedBy = "product")
+    private List<Item> items;
+
+    public Product() {
+    }
+
     public Product(String name, String description, BigDecimal priceInEuro) {
-        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
         this.priceInEuro = priceInEuro;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
@@ -31,5 +43,10 @@ public class Product {
 
     public BigDecimal getPriceInEuro() {
         return priceInEuro;
+    }
+
+
+    public List<Item> getItems() {
+        return items;
     }
 }

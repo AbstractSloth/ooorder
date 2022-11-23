@@ -1,32 +1,45 @@
 package be.sloth.ooorder.domain.customer;
 
+import javax.persistence.*;
 import java.util.*;
 
+@Entity
+@Table
 public class Customer {
 
-    private final String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customer_seq")
+    @SequenceGenerator(name = "customer_seq", sequenceName = "customer_seq", allocationSize = 1)
+    private long id;
     private String firstName;
     private String lastName;
-    private String eMail;
 
+    @Column(name = "email")
+    private String mail;
+
+    @JoinColumn
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
     private String phoneNumber;
 
-    private final Set<Privilege> privileges = new HashSet<>();
+    @OneToMany(mappedBy = "customer")
+    private List<CustomerPrivilege> privileges;
 
     private String password;
 
-    public Customer(String firstName, String lastName, String eMail, Address address, String phoneNumber, String password) {
+    public Customer() {
+    }
+
+    public Customer(String firstName, String lastName, String mail, Address address, String phoneNumber, String password) {
         this.address = address;
         this.password = password;
-        this.id = UUID.randomUUID().toString();
         this.firstName = firstName;
         this.lastName = lastName;
-        this.eMail = eMail;
+        this.mail = mail;
         this.phoneNumber = phoneNumber;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
@@ -40,11 +53,12 @@ public class Customer {
 
 
     public void grantPrivilege(Privilege privilege) {
-        privileges.add(privilege);
+        if(checkYourPrivilege(privilege))throw new IllegalArgumentException("this customer already has " + privilege);
+        privileges.add(new CustomerPrivilege(this,privilege));
     }
 
-    public String geteMail() {
-        return eMail;
+    public String getMail() {
+        return mail;
     }
 
     public boolean checkPassword(String password) {
@@ -52,6 +66,6 @@ public class Customer {
     }
 
     public boolean checkYourPrivilege(Privilege privilege) {
-        return privileges.contains(privilege);
+        return privileges.stream().anyMatch(customerPrivilege -> customerPrivilege.isThisPrivilege(privilege));
     }
 }

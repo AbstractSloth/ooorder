@@ -1,7 +1,9 @@
 package be.sloth.ooorder.api;
 
+import be.sloth.ooorder.api.dto.RegisterCustomerDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
@@ -10,22 +12,12 @@ import org.springframework.test.annotation.DirtiesContext;
 import static io.restassured.RestAssured.given;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@AutoConfigureTestDatabase
 class CustomerControlTest {
 
 
 
 
-    private static String requestBody = "{\n" +
-            "  \"eMail\": \"x@x.x\",\n" +
-            "  \"firstName\": \"a\",\n" +
-            "  \"lastName\": \"b\",\n" +
-            "  \"street\": \"abcstreet\", \n" +
-            "  \"houseNumber\": \"11\", \n" +
-            "  \"postalCode\": \"1234\", \n" +
-            "  \"city\": \"Brussels\", \n" +
-            "  \"phoneNumber\": \"11\", \n" +
-            "  \"password\": \"ASSWORD\"}";
 
 
     @LocalServerPort
@@ -40,7 +32,8 @@ class CustomerControlTest {
                 .port(port)
                 .header("Content-type", "application/json")
                 .and()
-                .body(requestBody)
+                .body(new RegisterCustomerDTO("a","b","1","x@x.x",
+                        "abcStreet","11","1234","Brussels","ASSWORD"))
                 .when()
                 .post("/customer")
                 .then()
@@ -52,22 +45,14 @@ class CustomerControlTest {
     @Test
     void registerCustomerWithoutEmail() {
 
-        String badRequestBody = "{\n" +
-                "  \"firstName\": \"a\",\n" +
-                "  \"lastName\": \"b\",\n" +
-                "  \"street\": \"abcstreet\", \n" +
-                "  \"houseNumber\": \"11\", \n" +
-                "  \"postalCode\": \"1234\", \n" +
-                "  \"city\": \"Brussels\", \n" +
-                "  \"phoneNumber\": \"11\", \n" +
-                "  \"password\": \"ASSWORD\"}";
 
         given()
                 .baseUri("http://localhost")
                 .port(port)
                 .header("Content-type", "application/json")
                 .and()
-                .body(badRequestBody)
+                .body(new RegisterCustomerDTO("a","b","1","",
+                        "abcStreet","11","1234","Brussels","ASSWORD"))
                 .when()
                 .post("/customer")
                 .then()
