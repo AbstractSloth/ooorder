@@ -1,6 +1,7 @@
 package be.sloth.ooorder.api;
 
 import be.sloth.ooorder.domain.repository.CustomerRepository;
+import be.sloth.ooorder.service.ItemService;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ class ProductControlTest {
 
     @Autowired
     private CustomerRepository customerRepository;
+
+    @Autowired
+    private ItemService service;
 
     @LocalServerPort
     private int port;
@@ -57,9 +61,53 @@ class ProductControlTest {
     }
 
     @Test
+    void registerProduct_unauthorized() {
+
+
+        given()
+                .baseUri("http://localhost")
+                .port(port)
+                .auth()
+                .preemptive()
+                .basic("gigachad@based.com", "assword")
+                .header("Accept", ContentType.JSON.getAcceptHeader())
+                .header("Content-type", "application/json")
+                .and()
+                .body(requestBody)
+                .when()
+                .post("/catalogue")
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.UNAUTHORIZED.value())
+                .extract();
+    }
+
+    @Test
+    void registerProduct_forbidden() {
+
+
+        given()
+                .baseUri("http://localhost")
+                .port(port)
+                .auth()
+                .preemptive()
+                .basic("soijack@cringe.com", "password")
+                .header("Accept", ContentType.JSON.getAcceptHeader())
+                .header("Content-type", "application/json")
+                .and()
+                .body(requestBody)
+                .when()
+                .post("/catalogue")
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.FORBIDDEN.value())
+                .extract();
+    }
+
+    @Test
     void viewCatalogue() {
 
-
+        service.registerDummyProduct();
 
         given()
                 .baseUri("http://localhost")

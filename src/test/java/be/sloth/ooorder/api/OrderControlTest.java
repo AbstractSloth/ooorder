@@ -79,4 +79,42 @@ class OrderControlTest {
         Assertions.assertEquals(5,itemRepo.countItemsByProductAndStatus(product, RESERVED));
     }
 
+
+    @Test
+    void restockAfterReservation() {
+
+        service.registerDummyProduct();
+
+
+        String requestBody = "[{\n" +
+                "  \"product\": \""+ 2  +"\",\n" +
+                "  \"amount\": 10 } \n" +
+                "]";
+
+
+
+
+
+        given()
+                .baseUri("http://localhost")
+                .port(port)
+                .auth()
+                .preemptive()
+                .basic("gigachad@based.com", "password")
+                .header("Accept", ContentType.JSON.getAcceptHeader())
+                .header("Content-type", "application/json")
+                .and()
+                .body(requestBody)
+                .when()
+                .post("/order")
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.CREATED.value());
+
+
+        Product product = productRepo.getReferenceById(2L);
+        service.replenishStock(10,product);
+        Assertions.assertEquals(5,itemRepo.countItemsByProductAndStatus(product, AVAILABLE));
+    }
+
 }

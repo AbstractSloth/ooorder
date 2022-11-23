@@ -11876,3 +11876,596 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" becau
 2022-11-23 13:39:17.963  INFO 19244 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-11-23 13:39:17.963  INFO 19244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2022-11-23 13:39:17.965  INFO 19244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-11-23 13:45:07.383  INFO 26172 --- [main] b.sloth.ooorder.api.CustomerControlTest  : Starting CustomerControlTest using Java 17 on LAP0513 with PID 26172 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 13:45:07.384  INFO 26172 --- [main] b.sloth.ooorder.api.CustomerControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 13:45:08.508  INFO 26172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 13:45:08.571  INFO 26172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2022-11-23 13:45:08.727  INFO 26172 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2022-11-23 13:45:09.445  INFO 26172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 13:45:09.457  INFO 26172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 13:45:09.457  INFO 26172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 13:45:09.644  INFO 26172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 13:45:09.644  INFO 26172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2047 ms
+2022-11-23 13:45:09.836  INFO 26172 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:f6e0df43-3f5a-47a4-bbfd-4cfea3e9be7d;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2022-11-23 13:45:10.210  INFO 26172 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 13:45:10.211  INFO 26172 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 13:45:10.211  INFO 26172 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 13:45:10.236  INFO 26172 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:f6e0df43-3f5a-47a4-bbfd-4cfea3e9be7d (H2 2.1)
+2022-11-23 13:45:10.275  WARN 26172 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 13:45:10.319  INFO 26172 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.029s)
+2022-11-23 13:45:10.326  INFO 26172 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 13:45:10.353  INFO 26172 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 13:45:10.368  INFO 26172 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 13:45:10.402  INFO 26172 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 13:45:10.408  INFO 26172 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.057s)
+2022-11-23 13:45:10.574  INFO 26172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 13:45:10.638  INFO 26172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 13:45:10.852  INFO 26172 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 13:45:10.991  INFO 26172 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 13:45:11.284  WARN 26172 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:45:11.284  WARN 26172 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:45:11.618  INFO 26172 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 13:45:11.624  INFO 26172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:45:12.304  WARN 26172 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 13:45:14.423  INFO 26172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63708 (http) with context path ''
+2022-11-23 13:45:14.434  INFO 26172 --- [main] b.sloth.ooorder.api.CustomerControlTest  : Started CustomerControlTest in 7.325 seconds (JVM running for 14.367)
+2022-11-23 13:45:15.581  INFO 26172 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 13:45:15.582  INFO 26172 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 13:45:15.583  INFO 26172 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 13:45:15.701 ERROR 26172 --- [http-nio-auto-1-exec-1] b.s.ooorder.api.OoorderExceptionHandler  : E mail does not conform to format!
+2022-11-23 13:45:16.081  INFO 26172 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:46:35.497  INFO 3292 --- [main] be.sloth.ooorder.api.OrderControlTest    : Starting OrderControlTest using Java 17 on LAP0513 with PID 3292 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 13:46:35.498  INFO 3292 --- [main] be.sloth.ooorder.api.OrderControlTest    : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 13:46:36.273  INFO 3292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 13:46:36.326  INFO 3292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2022-11-23 13:46:37.100  INFO 3292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 13:46:37.111  INFO 3292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 13:46:37.112  INFO 3292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 13:46:37.227  INFO 3292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 13:46:37.228  INFO 3292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1560 ms
+2022-11-23 13:46:37.453  INFO 3292 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 13:46:37.453  INFO 3292 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 13:46:37.453  INFO 3292 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 13:46:37.461  INFO 3292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 13:46:37.684  INFO 3292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 13:46:37.698  INFO 3292 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:b76f9261-e349-4bfc-98db-4eb346140236 (H2 2.1)
+2022-11-23 13:46:37.735  WARN 3292 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 13:46:37.762  INFO 3292 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.013s)
+2022-11-23 13:46:37.766  INFO 3292 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 13:46:37.787  INFO 3292 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 13:46:37.799  INFO 3292 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 13:46:37.823  INFO 3292 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 13:46:37.827  INFO 3292 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.044s)
+2022-11-23 13:46:37.994  INFO 3292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 13:46:38.047  INFO 3292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 13:46:38.221  INFO 3292 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 13:46:38.345  INFO 3292 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 13:46:38.652  WARN 3292 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:46:38.652  WARN 3292 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:46:38.961  INFO 3292 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 13:46:38.968  INFO 3292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:46:39.661  WARN 3292 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 13:46:41.784  INFO 3292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63722 (http) with context path ''
+2022-11-23 13:46:41.798  INFO 3292 --- [main] be.sloth.ooorder.api.OrderControlTest    : Started OrderControlTest in 6.59 seconds (JVM running for 7.584)
+2022-11-23 13:46:43.282  INFO 3292 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 13:46:43.282  INFO 3292 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 13:46:43.284  INFO 3292 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 13:46:43.680  INFO 3292 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 13:46:43.682  INFO 3292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 13:46:43.694  INFO 3292 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:46:43.695  INFO 3292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 13:46:43.697  INFO 3292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 13:47:24.018  INFO 20316 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 20316 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 13:47:24.019  INFO 20316 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 13:47:24.801  INFO 20316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 13:47:24.866  INFO 20316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2022-11-23 13:47:25.575  INFO 20316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 13:47:25.590  INFO 20316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 13:47:25.590  INFO 20316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 13:47:25.737  INFO 20316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 13:47:25.738  INFO 20316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1542 ms
+2022-11-23 13:47:25.943  INFO 20316 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 13:47:25.943  INFO 20316 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 13:47:25.943  INFO 20316 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 13:47:25.952  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 13:47:26.168  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 13:47:26.187  INFO 20316 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:9f2818d8-fd07-496a-af53-1caeb8a846e6 (H2 2.1)
+2022-11-23 13:47:26.218  WARN 20316 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 13:47:26.235  INFO 20316 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.009s)
+2022-11-23 13:47:26.239  INFO 20316 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 13:47:26.256  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 13:47:26.265  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 13:47:26.285  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 13:47:26.289  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.035s)
+2022-11-23 13:47:26.440  INFO 20316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 13:47:26.496  INFO 20316 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 13:47:26.671  INFO 20316 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 13:47:26.810  INFO 20316 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 13:47:27.117  WARN 20316 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:47:27.117  WARN 20316 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:47:27.410  INFO 20316 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 13:47:27.418  INFO 20316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:47:28.222  WARN 20316 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 13:47:30.820  INFO 20316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63728 (http) with context path ''
+2022-11-23 13:47:30.840  INFO 20316 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 7.1 seconds (JVM running for 8.11)
+2022-11-23 13:47:32.229  INFO 20316 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 13:47:32.229  INFO 20316 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 13:47:32.231  INFO 20316 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 13:47:32.614  INFO 20316 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 13:47:32.616  INFO 20316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 13:47:32.625  INFO 20316 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:47:32.627  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 13:47:32.629  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 13:47:32.672  INFO 20316 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 20316 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 13:47:32.672  INFO 20316 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 13:47:32.963  INFO 20316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 13:47:32.985  INFO 20316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-23 13:47:33.162  INFO 20316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 13:47:33.163  INFO 20316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 13:47:33.164  INFO 20316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 13:47:33.202  INFO 20316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 13:47:33.202  INFO 20316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 528 ms
+2022-11-23 13:47:33.297  INFO 20316 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 13:47:33.297  INFO 20316 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 13:47:33.297  INFO 20316 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 13:47:33.298  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-11-23 13:47:33.302  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-11-23 13:47:33.303  INFO 20316 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:2a7e5dce-6fb5-4f7a-bbf3-a1415998fd1e (H2 2.1)
+2022-11-23 13:47:33.307  WARN 20316 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 13:47:33.311  INFO 20316 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.002s)
+2022-11-23 13:47:33.314  INFO 20316 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 13:47:33.320  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 13:47:33.327  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 13:47:33.352  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 13:47:33.356  INFO 20316 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.036s)
+2022-11-23 13:47:33.403  INFO 20316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 13:47:33.408  INFO 20316 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 13:47:33.436  WARN 20316 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:47:33.436  WARN 20316 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:47:33.500  INFO 20316 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 13:47:33.501  INFO 20316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:47:33.728  WARN 20316 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 13:47:34.813  INFO 20316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63731 (http) with context path ''
+2022-11-23 13:47:34.818  INFO 20316 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 2.178 seconds (JVM running for 12.088)
+2022-11-23 13:47:34.866  INFO 20316 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 13:47:34.868  INFO 20316 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 13:47:34.868  INFO 20316 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-11-23 13:47:34.931  INFO 20316 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 13:47:34.932  INFO 20316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 13:47:34.937  INFO 20316 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:47:34.939  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-11-23 13:47:34.940  INFO 20316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-11-23 13:51:06.856  INFO 23288 --- [main] b.sloth.ooorder.OoorderApplicationTests  : Starting OoorderApplicationTests using Java 17 on LAP0513 with PID 23288 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 13:51:06.857  INFO 23288 --- [main] b.sloth.ooorder.OoorderApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 13:51:07.719  INFO 23288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 13:51:07.775  INFO 23288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2022-11-23 13:51:08.390  INFO 23288 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 13:51:08.391  INFO 23288 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 13:51:08.391  INFO 23288 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 13:51:08.398  INFO 23288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 13:51:08.576  INFO 23288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 13:51:08.585  INFO 23288 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:43e27a56-37de-4b94-a6f0-5a308c2ab639 (H2 2.1)
+2022-11-23 13:51:08.650  WARN 23288 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 13:51:08.674  INFO 23288 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.014s)
+2022-11-23 13:51:08.685  INFO 23288 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 13:51:08.708  INFO 23288 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 13:51:08.720  INFO 23288 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 13:51:08.756  INFO 23288 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 13:51:08.761  INFO 23288 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.055s)
+2022-11-23 13:51:08.944  INFO 23288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 13:51:09.004  INFO 23288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 13:51:09.176  INFO 23288 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 13:51:09.281  INFO 23288 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 13:51:09.599  WARN 23288 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:51:09.600  WARN 23288 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 13:51:09.886  INFO 23288 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 13:51:09.895  INFO 23288 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:51:10.708  WARN 23288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 13:51:12.412  INFO 23288 --- [main] b.sloth.ooorder.OoorderApplicationTests  : Started OoorderApplicationTests in 5.808 seconds (JVM running for 6.7)
+2022-11-23 13:51:12.605  INFO 23288 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 13:51:12.606  INFO 23288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 13:51:12.609  INFO 23288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 14:00:29.843  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 20752 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:00:29.844  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:00:31.043  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:00:31.111  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:00:32.175  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:00:32.188  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:00:32.189  INFO 20752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:00:32.330  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:00:32.330  INFO 20752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2273 ms
+2022-11-23 14:00:32.565  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:00:32.566  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:00:32.566  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:00:32.584  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 14:00:32.833  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 14:00:32.845  INFO 20752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:efa533bb-f953-47b5-9d24-0515921e4e6d (H2 2.1)
+2022-11-23 14:00:32.878  WARN 20752 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:00:32.906  INFO 20752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.021s)
+2022-11-23 14:00:32.910  INFO 20752 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:00:32.928  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:00:32.940  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:00:32.964  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:00:32.970  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.043s)
+2022-11-23 14:00:33.163  INFO 20752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:00:33.230  INFO 20752 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 14:00:33.433  INFO 20752 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 14:00:33.589  INFO 20752 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:00:33.991  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:33.992  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:34.366  INFO 20752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:00:34.374  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:35.278  WARN 20752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:00:37.829  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63824 (http) with context path ''
+2022-11-23 14:00:37.844  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 8.307 seconds (JVM running for 9.518)
+2022-11-23 14:00:39.266  INFO 20752 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:00:39.266  INFO 20752 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:00:39.268  INFO 20752 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:00:39.586 ERROR 20752 --- [http-nio-auto-1-exec-1] b.sloth.ooorder.service.SecurityService  : Password does not match for user gigachad@based.com
+2022-11-23 14:00:39.725  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:00:39.727  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:00:39.739  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:39.741  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 14:00:39.743  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 14:00:39.785  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 20752 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:00:39.785  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:00:40.074  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:00:40.096  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:00:40.335  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:00:40.336  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:00:40.338  INFO 20752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:00:40.386  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:00:40.386  INFO 20752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 600 ms
+2022-11-23 14:00:40.492  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:00:40.492  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:00:40.492  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:00:40.494  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-11-23 14:00:40.496  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-11-23 14:00:40.497  INFO 20752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:f3b47d08-2c24-42a1-afb6-18187697e165 (H2 2.1)
+2022-11-23 14:00:40.500  WARN 20752 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:00:40.505  INFO 20752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.003s)
+2022-11-23 14:00:40.507  INFO 20752 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:00:40.512  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:00:40.520  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:00:40.546  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:00:40.553  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.040s)
+2022-11-23 14:00:40.597  INFO 20752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:00:40.608  INFO 20752 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:00:40.639  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:40.639  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:40.713  INFO 20752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:00:40.714  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:40.936  WARN 20752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:00:42.202  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63827 (http) with context path ''
+2022-11-23 14:00:42.207  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 2.452 seconds (JVM running for 13.88)
+2022-11-23 14:00:42.244  INFO 20752 --- [http-nio-auto-2-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:00:42.244  INFO 20752 --- [http-nio-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:00:42.245  INFO 20752 --- [http-nio-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:00:42.324  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:00:42.325  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:00:42.330  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:42.331  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-11-23 14:00:42.331  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-11-23 14:00:42.362  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 20752 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:00:42.363  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:00:42.606  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:00:42.626  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:00:42.805  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:00:42.807  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:00:42.807  INFO 20752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:00:42.843  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:00:42.844  INFO 20752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 479 ms
+2022-11-23 14:00:42.944  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:00:42.944  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:00:42.944  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:00:42.946  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-11-23 14:00:42.949  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-11-23 14:00:42.950  INFO 20752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:fe7f3d51-ce5a-4099-acaf-4187e73f851b (H2 2.1)
+2022-11-23 14:00:42.952  WARN 20752 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:00:42.955  INFO 20752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.001s)
+2022-11-23 14:00:42.956  INFO 20752 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:00:42.962  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:00:42.967  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:00:42.989  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:00:42.995  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.033s)
+2022-11-23 14:00:43.035  INFO 20752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:00:43.044  INFO 20752 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:00:43.070  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:43.070  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:43.141  INFO 20752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:00:43.141  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:43.362  WARN 20752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:00:44.363  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63830 (http) with context path ''
+2022-11-23 14:00:44.366  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 2.031 seconds (JVM running for 16.04)
+2022-11-23 14:00:44.386  INFO 20752 --- [http-nio-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:00:44.387  INFO 20752 --- [http-nio-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:00:44.387  INFO 20752 --- [http-nio-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-11-23 14:00:44.402 ERROR 20752 --- [http-nio-auto-3-exec-1] b.sloth.ooorder.service.SecurityService  : User soijack@cringe.com does not have privilege ADMIN
+2022-11-23 14:00:44.423  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:00:44.424  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:00:44.433  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:44.434  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-11-23 14:00:44.435  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-11-23 14:00:44.460  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 20752 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:00:44.460  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:00:44.678  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:00:44.698  INFO 20752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:00:44.838  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:00:44.839  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:00:44.840  INFO 20752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:00:44.886  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:00:44.886  INFO 20752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
+2022-11-23 14:00:44.993  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:00:44.993  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:00:44.994  INFO 20752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:00:44.995  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-11-23 14:00:44.998  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-11-23 14:00:44.998  INFO 20752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:4790b7d0-65e1-4566-8a16-de3aef3de83d (H2 2.1)
+2022-11-23 14:00:45.001  WARN 20752 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:00:45.006  INFO 20752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.002s)
+2022-11-23 14:00:45.008  INFO 20752 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:00:45.012  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:00:45.019  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:00:45.040  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:00:45.046  INFO 20752 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.034s)
+2022-11-23 14:00:45.087  INFO 20752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:00:45.096  INFO 20752 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:00:45.125  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:45.125  WARN 20752 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:00:45.211  INFO 20752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:00:45.211  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:45.397  WARN 20752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:00:46.364  INFO 20752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63833 (http) with context path ''
+2022-11-23 14:00:46.370  INFO 20752 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 1.931 seconds (JVM running for 18.043)
+2022-11-23 14:00:46.412  INFO 20752 --- [http-nio-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:00:46.413  INFO 20752 --- [http-nio-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:00:46.414  INFO 20752 --- [http-nio-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:00:46.446  INFO 20752 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:00:46.446  INFO 20752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:00:46.450  INFO 20752 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:00:46.451  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-11-23 14:00:46.452  INFO 20752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-11-23 14:11:38.174  INFO 9124 --- [main] be.sloth.ooorder.api.OrderControlTest    : Starting OrderControlTest using Java 17 on LAP0513 with PID 9124 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:11:38.176  INFO 9124 --- [main] be.sloth.ooorder.api.OrderControlTest    : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:11:39.314  INFO 9124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:11:39.370  INFO 9124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:11:40.203  INFO 9124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:11:40.212  INFO 9124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:11:40.212  INFO 9124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:11:40.341  INFO 9124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:11:40.341  INFO 9124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1940 ms
+2022-11-23 14:11:40.559  INFO 9124 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:11:40.559  INFO 9124 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:11:40.560  INFO 9124 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:11:40.570  INFO 9124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 14:11:40.774  INFO 9124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 14:11:40.785  INFO 9124 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:b37c6a8b-7591-4fce-a180-a4230a13f194 (H2 2.1)
+2022-11-23 14:11:40.825  WARN 9124 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:11:40.856  INFO 9124 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.021s)
+2022-11-23 14:11:40.862  INFO 9124 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:11:40.881  INFO 9124 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:11:40.894  INFO 9124 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:11:40.923  INFO 9124 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:11:40.930  INFO 9124 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.051s)
+2022-11-23 14:11:41.092  INFO 9124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:11:41.151  INFO 9124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 14:11:41.322  INFO 9124 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 14:11:41.443  INFO 9124 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:11:41.717  WARN 9124 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:11:41.718  WARN 9124 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:11:41.987  INFO 9124 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:11:41.994  INFO 9124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:11:42.680  WARN 9124 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:11:44.687  INFO 9124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63921 (http) with context path ''
+2022-11-23 14:11:44.699  INFO 9124 --- [main] be.sloth.ooorder.api.OrderControlTest    : Started OrderControlTest in 6.817 seconds (JVM running for 8.081)
+2022-11-23 14:11:46.094  INFO 9124 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:11:46.095  INFO 9124 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:11:46.096  INFO 9124 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:11:46.471  INFO 9124 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:11:46.472  INFO 9124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:11:46.483  INFO 9124 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:11:46.485  INFO 9124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 14:11:46.490  INFO 9124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 14:12:25.749  INFO 23776 --- [main] be.sloth.ooorder.api.OrderControlTest    : Starting OrderControlTest using Java 17 on LAP0513 with PID 23776 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:12:25.751  INFO 23776 --- [main] be.sloth.ooorder.api.OrderControlTest    : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:12:26.588  INFO 23776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:12:26.648  INFO 23776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:12:27.399  INFO 23776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:12:27.407  INFO 23776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:12:27.408  INFO 23776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:12:27.527  INFO 23776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:12:27.527  INFO 23776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1557 ms
+2022-11-23 14:12:27.749  INFO 23776 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:12:27.750  INFO 23776 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:12:27.750  INFO 23776 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:12:27.760  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 14:12:28.021  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 14:12:28.035  INFO 23776 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:9fa8d7dc-eb61-4a1d-b125-eb00243ebb5e (H2 2.1)
+2022-11-23 14:12:28.078  WARN 23776 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:12:28.100  INFO 23776 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2022-11-23 14:12:28.106  INFO 23776 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:12:28.128  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:12:28.143  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:12:28.177  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:12:28.184  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.058s)
+2022-11-23 14:12:28.376  INFO 23776 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:12:28.442  INFO 23776 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 14:12:28.664  INFO 23776 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 14:12:28.829  INFO 23776 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:12:29.213  WARN 23776 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:12:29.214  WARN 23776 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:12:29.611  INFO 23776 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:12:29.619  INFO 23776 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:12:30.476  WARN 23776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:12:33.078  INFO 23776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63929 (http) with context path ''
+2022-11-23 14:12:33.095  INFO 23776 --- [main] be.sloth.ooorder.api.OrderControlTest    : Started OrderControlTest in 7.683 seconds (JVM running for 8.8)
+2022-11-23 14:12:34.519  INFO 23776 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:12:34.520  INFO 23776 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:12:34.521  INFO 23776 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:12:34.937  INFO 23776 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:12:34.939  INFO 23776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:12:34.950  INFO 23776 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:12:34.952  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 14:12:34.955  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 14:12:34.997  INFO 23776 --- [main] be.sloth.ooorder.api.OrderControlTest    : Starting OrderControlTest using Java 17 on LAP0513 with PID 23776 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:12:34.998  INFO 23776 --- [main] be.sloth.ooorder.api.OrderControlTest    : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:12:35.254  INFO 23776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:12:35.275  INFO 23776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:12:35.467  INFO 23776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:12:35.469  INFO 23776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:12:35.469  INFO 23776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:12:35.517  INFO 23776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:12:35.519  INFO 23776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 519 ms
+2022-11-23 14:12:35.617  INFO 23776 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:12:35.617  INFO 23776 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:12:35.617  INFO 23776 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:12:35.619  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-11-23 14:12:35.622  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-11-23 14:12:35.622  INFO 23776 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:d20f2593-2d28-4061-bbf0-cdbc4a8c5e03 (H2 2.1)
+2022-11-23 14:12:35.624  WARN 23776 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:12:35.628  INFO 23776 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.001s)
+2022-11-23 14:12:35.629  INFO 23776 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:12:35.634  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:12:35.641  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:12:35.667  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:12:35.673  INFO 23776 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.039s)
+2022-11-23 14:12:35.720  INFO 23776 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:12:35.728  INFO 23776 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:12:35.759  WARN 23776 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:12:35.759  WARN 23776 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:12:35.833  INFO 23776 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:12:35.833  INFO 23776 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:12:36.056  WARN 23776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:12:37.220  INFO 23776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63933 (http) with context path ''
+2022-11-23 14:12:37.224  INFO 23776 --- [main] be.sloth.ooorder.api.OrderControlTest    : Started OrderControlTest in 2.261 seconds (JVM running for 12.929)
+2022-11-23 14:12:37.288  INFO 23776 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:12:37.289  INFO 23776 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:12:37.290  INFO 23776 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:12:37.430  INFO 23776 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:12:37.431  INFO 23776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:12:37.440  INFO 23776 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:12:37.441  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-11-23 14:12:37.443  INFO 23776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-11-23 14:15:06.064  INFO 24976 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 24976 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:15:06.066  INFO 24976 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:15:06.815  INFO 24976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:15:06.870  INFO 24976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:15:07.749  INFO 24976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:15:07.762  INFO 24976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:15:07.763  INFO 24976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:15:07.937  INFO 24976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:15:07.938  INFO 24976 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1698 ms
+2022-11-23 14:15:08.213  INFO 24976 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:15:08.213  INFO 24976 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:15:08.213  INFO 24976 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:15:08.225  INFO 24976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 14:15:08.535  INFO 24976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 14:15:08.549  INFO 24976 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:d8e19917-eb79-4eec-b634-4ec887d84792 (H2 2.1)
+2022-11-23 14:15:08.591  WARN 24976 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:15:08.618  INFO 24976 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.016s)
+2022-11-23 14:15:08.625  INFO 24976 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:15:08.649  INFO 24976 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:15:08.663  INFO 24976 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:15:08.698  INFO 24976 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:15:08.706  INFO 24976 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.059s)
+2022-11-23 14:15:08.909  INFO 24976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:15:08.978  INFO 24976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 14:15:09.224  INFO 24976 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 14:15:09.375  INFO 24976 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:15:09.770  WARN 24976 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:15:09.771  WARN 24976 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:15:10.154  INFO 24976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:15:10.165  INFO 24976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:15:11.038  WARN 24976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:15:13.444  INFO 24976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63950 (http) with context path ''
+2022-11-23 14:15:13.463  INFO 24976 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 7.679 seconds (JVM running for 8.717)
+2022-11-23 14:15:14.810  INFO 24976 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:15:14.810  INFO 24976 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:15:14.811  INFO 24976 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:15:15.182  INFO 24976 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:15:15.184  INFO 24976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:15:15.201  INFO 24976 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:15:15.204  INFO 24976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 14:15:15.209  INFO 24976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 14:16:11.129  INFO 8672 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 8672 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:16:11.130  INFO 8672 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:16:11.904  INFO 8672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:16:11.964  INFO 8672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:16:12.726  INFO 8672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:16:12.738  INFO 8672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:16:12.739  INFO 8672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:16:12.881  INFO 8672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:16:12.881  INFO 8672 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
+2022-11-23 14:16:13.074  INFO 8672 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:16:13.074  INFO 8672 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:16:13.074  INFO 8672 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:16:13.084  INFO 8672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 14:16:13.316  INFO 8672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 14:16:13.328  INFO 8672 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:a6df0fe3-ba97-4a46-9ddd-a3da2218083a (H2 2.1)
+2022-11-23 14:16:13.363  WARN 8672 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:16:13.381  INFO 8672 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.008s)
+2022-11-23 14:16:13.385  INFO 8672 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:16:13.401  INFO 8672 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:16:13.411  INFO 8672 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:16:13.436  INFO 8672 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:16:13.440  INFO 8672 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.040s)
+2022-11-23 14:16:13.579  INFO 8672 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:16:13.637  INFO 8672 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 14:16:13.820  INFO 8672 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 14:16:13.932  INFO 8672 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:16:14.217  WARN 8672 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:16:14.217  WARN 8672 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:16:14.488  INFO 8672 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:16:14.498  INFO 8672 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:16:15.195  WARN 8672 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:16:17.238  INFO 8672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63963 (http) with context path ''
+2022-11-23 14:16:17.258  INFO 8672 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 6.386 seconds (JVM running for 7.355)
+2022-11-23 14:16:18.281  INFO 8672 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:16:18.281  INFO 8672 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:16:18.283  INFO 8672 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:16:18.599  INFO 8672 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:16:18.601  INFO 8672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:16:18.613  INFO 8672 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:16:18.616  INFO 8672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 14:16:18.618  INFO 8672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-23 14:18:05.218  INFO 11592 --- [main] be.sloth.ooorder.api.ProductControlTest  : Starting ProductControlTest using Java 17 on LAP0513 with PID 11592 (started by fobe in C:\_development\stuff\ooorder)
+2022-11-23 14:18:05.220  INFO 11592 --- [main] be.sloth.ooorder.api.ProductControlTest  : No active profile set, falling back to 1 default profile: "default"
+2022-11-23 14:18:06.011  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 14:18:06.073  INFO 11592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2022-11-23 14:18:06.791  INFO 11592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-11-23 14:18:06.801  INFO 11592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-23 14:18:06.802  INFO 11592 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 14:18:06.955  INFO 11592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-23 14:18:06.955  INFO 11592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1563 ms
+2022-11-23 14:18:07.198  INFO 11592 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-11-23 14:18:07.199  INFO 11592 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-11-23 14:18:07.199  INFO 11592 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-11-23 14:18:07.209  INFO 11592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-23 14:18:07.482  INFO 11592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-23 14:18:07.503  INFO 11592 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:48060424-7451-4cf7-9dbe-3bab3da3f02e (H2 2.1)
+2022-11-23 14:18:07.540  WARN 11592 --- [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-11-23 14:18:07.566  INFO 11592 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2022-11-23 14:18:07.574  INFO 11592 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2022-11-23 14:18:07.598  INFO 11592 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2022-11-23 14:18:07.614  INFO 11592 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create tables"
+2022-11-23 14:18:07.644  INFO 11592 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - add dummy data"
+2022-11-23 14:18:07.654  INFO 11592 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.057s)
+2022-11-23 14:18:07.832  INFO 11592 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 14:18:07.906  INFO 11592 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 14:18:08.102  INFO 11592 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 14:18:08.258  INFO 11592 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-11-23 14:18:08.616  WARN 11592 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:18:08.616  WARN 11592 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): be.sloth.ooorder.domain.customer.CustomerPrivilege
+2022-11-23 14:18:08.981  INFO 11592 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 14:18:08.989  INFO 11592 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:18:09.835  WARN 11592 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 14:18:12.200  INFO 11592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 64003 (http) with context path ''
+2022-11-23 14:18:12.218  INFO 11592 --- [main] be.sloth.ooorder.api.ProductControlTest  : Started ProductControlTest in 7.301 seconds (JVM running for 8.322)
+2022-11-23 14:18:13.649  INFO 11592 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 14:18:13.650  INFO 11592 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-23 14:18:13.651  INFO 11592 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-23 14:18:13.862  INFO 11592 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-23 14:18:13.864  INFO 11592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-23 14:18:13.872  INFO 11592 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 14:18:13.874  INFO 11592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-23 14:18:13.878  INFO 11592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
