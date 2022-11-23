@@ -1,6 +1,7 @@
 package be.sloth.ooorder.api.mapper;
 
 
+import be.sloth.ooorder.api.dto.CustomerListDTO;
 import be.sloth.ooorder.api.dto.RegisterCustomerDTO;
 import be.sloth.ooorder.domain.customer.Address;
 import be.sloth.ooorder.domain.customer.Customer;
@@ -25,5 +26,12 @@ public class CustomerMapper {
                 toBeAdded.getHouseNumber(),
                 toBeAdded.getPostalCode(),
                 toBeAdded.getCity());
+    }
+
+    public CustomerListDTO mapListCustomer(Customer customer){
+        return new CustomerListDTO(customer.getId(),
+                customer.getFirstName(),
+                customer.getLastName(),
+                customer.getPrivileges());
     }
 }

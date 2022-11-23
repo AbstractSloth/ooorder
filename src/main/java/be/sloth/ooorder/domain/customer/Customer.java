@@ -68,4 +68,8 @@ public class Customer {
     public boolean checkYourPrivilege(Privilege privilege) {
         return privileges.stream().anyMatch(customerPrivilege -> customerPrivilege.isThisPrivilege(privilege));
     }
+
+    public List<Privilege> getPrivileges(){
+        return privileges.stream().map(CustomerPrivilege::getPrivilege).toList();
+    }
 }
